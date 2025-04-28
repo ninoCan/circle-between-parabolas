@@ -11,7 +11,7 @@ $$
 
 What is the radius of the circle centered on the x-axis tangent to both parabolas on the first and fourth quadrants?
 
-![A circle tangent to two parallel parabolas.](./desmos-graph.b64)
+![A circle tangent to two parallel parabolas.](./desmos-graph.png)
 
 ## Marimo
 

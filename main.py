@@ -11,7 +11,7 @@ def _():
     import marimo as mo
     import numpy as np
     import sympy as sym
-    return mo, sym
+    return (mo,)
 
 
 @app.cell
@@ -49,6 +49,7 @@ def _(mo):
         $$
 
         The tangent lines at these points will have the same slope, given by the derivative of the parabolic equation: $m = 2x$.
+
         Granted that their perpendicular line will pass through the center of the circle, it will follow the following equation:
 
         $$
@@ -85,41 +86,9 @@ def _(mo):
         r\sin\theta_2 = \frac{- r\cos\theta_2}{2(a+r\cos\theta_2)},\\
         \sqrt{(\cos\theta_1 -\cos\theta_2)^2 + (\sin\theta_1 - \sin\theta_2)^2} = 2 (\sin\theta_1\cos\theta_2 - \cos\theta_1\sin\theta_2).
         $$
-
         """
     )
     return
-
-
-#@app.cell
-#def _(sym):
-#    d = sym.Rational(1, 2)
-#    a = sym.Symbol("a", positive=True)
-#    r = sym.Symbol("r", positive=True)
-#    t1 = sym.Symbol("t1", positive=True)
-#    t1_range = sym.And(t1 > 0, t1 < sym.pi)
-#    t2 = sym.Symbol("t2", positive=True)
-#    t2_range = sym.And(t2 > 0, t2 < sym.pi)
-
-#    c1 = sym.cos(t1)
-#    s1 = sym.sin(t1)
-#    c2 = sym.cos(t2)
-#    s2 = sym.sin(t2)
-
-#    #sym.nsolve(
-#    sym.solve(
-#        [
-#            r * s1 - a - r * c1,
-#            2 * r * s1 * (a + r *c1) + r * c1 ,
-#            r * s2 - a - r * c2 + d,
-#            2 * r * s2 * (a + r *c2) + r * c2,
-#            sym.sqrt((c1 - c2) ** 2  + (s1 - s2) ** 2 ) - 2 * (s1 * c2 - c1 * s2),
-#        ],
-#        [a, r, t1, t2],
-#        #[0.5, 0.2, 0.5, 0.5],
-#        dict=True
-#    )
-#    return
 
 
 if __name__ == "__main__":
